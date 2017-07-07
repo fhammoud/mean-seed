@@ -1,6 +1,22 @@
-# MeanSeed
+# MEAN Seed
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.0.
+This is a project to help you quickstart a MEAN, or [MongoDB](https://www.mongodb.com/), [Express](https://expressjs.com/), [Angular](https://angular.io/)(Angular4) and [Node.js](https://nodejs.org) application.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.0 and [Express Generator](https://expressjs.com/en/starter/generator.html) version 4.15.0.
+
+## Install
+
+Run `npm install` to install all project dependencies.
+
+## Start Express server
+
+Run `npm start` to start the Express server via [nodemon](https://nodemon.io/). The server will automatically restart when Node code changes are detected.
+
+## Start build watch
+
+Run `npm run build` to build the project and have it rebuild automatically when Angular code changes are detected. Just refresh your browser.
+
+
+# Other commands
 
 ## Development server
 
