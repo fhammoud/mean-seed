@@ -3,12 +3,13 @@ var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
+var db_url = require('./db');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
 
+// Start express
 var app = express();
-
 
 // uncomment after placing your favicon in /dist
 app.use(favicon(path.join('dist', 'favicon.ico')));
