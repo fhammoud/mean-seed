@@ -7,13 +7,13 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `npm install` to install all project dependencies.
 
-## Start Express server
-
-Run `npm start` to start the Express server via [nodemon](https://nodemon.io/). The server will automatically restart when Node code changes are detected.
-
 ## Start build watch
 
-Run `npm run build` to build the project and have it rebuild automatically when Angular code changes are detected. Just refresh your browser.
+Run `npm run build` to build the project. The build artifacts will be stored in the `dist/` directory and it will automatically rebuild when Angular code changes are detected. Just refresh your browser.
+
+## Start Express server
+
+Run `npm start` to start the Express server via [nodemon](https://nodemon.io/). Must build the project first to create the `dist/` directory Express serves. Navigate to `http://localhost:3000/`. The server will automatically restart when Node code changes are detected.
 
 
 # Other commands
