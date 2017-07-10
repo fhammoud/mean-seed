@@ -1,27 +1,31 @@
+// Require dependencies
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
-var db_url = require('./db');
 
+// Require app routes
 var index = require('./routes/index');
 var users = require('./routes/users');
+
+// Connect to DB
+require('./db');
 
 // Start express
 var app = express();
 
-// uncomment after placing your favicon in /dist
-app.use(favicon(path.join('dist', 'favicon.ico')));
+// Use middleware
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(express.static(path.join('dist')));
+app.use(express.static(path.join(__dirname, 'public')));
 
-// app routes
+// App routes
 app.use('/users', users);
 
-// catch all other requests and return index
+// Catch all other requests and return index
 app.use('*', index);
 
 module.exports = app;

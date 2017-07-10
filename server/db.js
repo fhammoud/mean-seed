@@ -1,6 +1,10 @@
 var mongoose = require('mongoose');
 
-var url = process.env.NODE_ENV === 'development' ? process.env.DEV_DB_URL : process.env.PROD_DB_URL;
+// Get DB URL based on environment
+// May want to add .env file
+var url = process.env.NODE_ENV === 'development'
+  ? process.env.MONGODB_URI_DEV
+  : process.env.MONGODB_URI;
 
 // Connect to DB
 mongoose.connect(url);
@@ -25,5 +29,3 @@ process.on('SIGINT', function () {
     process.exit(0);
   });
 });
-
-module.exports = url;

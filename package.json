@@ -4,8 +4,9 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "nodemon ./src/server/bin/www",
+    "start": "nodemon ./server/bin/www",
     "build": "ng build --watch",
+    "build:prod": "ng build --env=prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
